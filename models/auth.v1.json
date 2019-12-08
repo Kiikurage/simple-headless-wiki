@@ -1,0 +1,23 @@
+{
+  "title": "Auth",
+  "type": "object",
+  "properties": {
+    "created": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "user": {
+      "$ref": "./user.v1.json"
+    },
+    "permissions": {
+      "type": "array",
+      "enum": [
+        "EDIT"
+      ],
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "description": "Authentication information"
+}

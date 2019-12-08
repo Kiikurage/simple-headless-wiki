@@ -1,0 +1,9 @@
+{
+  "title": "Page",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    }
+  }
+}

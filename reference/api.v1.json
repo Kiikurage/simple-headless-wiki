@@ -1,0 +1,80 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/users/{userId}": {
+      "parameters": [
+        {
+          "type": "string",
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          },
+          "description": "User ID"
+        }
+      ],
+      "get": {
+        "summary": "Get user",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-users-{userId}"
+      },
+      "post": {
+        "summary": "Create new user",
+        "tags": [],
+        "responses": {},
+        "operationId": "post-users-{userId}"
+      },
+      "patch": {
+        "summary": "Update user",
+        "tags": [],
+        "responses": {},
+        "operationId": "patch-users-{userId}"
+      },
+      "delete": {
+        "summary": "Delete user",
+        "tags": [],
+        "responses": {},
+        "operationId": "delete-users-{userId}"
+      }
+    },
+    "/auth": {
+      "parameters": [],
+      "get": {
+        "summary": "Get current authentication information",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-auth-{authId}",
+        "security": []
+      },
+      "delete": {
+        "summary": "Sign out",
+        "tags": [],
+        "responses": {},
+        "operationId": "delete-auth-{authId}"
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-auth-{authId}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {}
+  }
+}
