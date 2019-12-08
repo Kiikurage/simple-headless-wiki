@@ -27,25 +27,19 @@
         "summary": "Get user",
         "tags": [],
         "responses": {},
-        "operationId": "get-users-{userId}"
-      },
-      "post": {
-        "summary": "Create new user",
-        "tags": [],
-        "responses": {},
-        "operationId": "post-users-{userId}"
+        "operationId": "getUser"
       },
       "patch": {
         "summary": "Update user",
         "tags": [],
         "responses": {},
-        "operationId": "patch-users-{userId}"
+        "operationId": "patchUser"
       },
       "delete": {
         "summary": "Delete user",
         "tags": [],
         "responses": {},
-        "operationId": "delete-users-{userId}"
+        "operationId": "deleteUser"
       }
     },
     "/auth": {
@@ -54,18 +48,29 @@
         "summary": "Get current authentication information",
         "tags": [],
         "responses": {},
-        "operationId": "get-auth-{authId}",
+        "operationId": "getAuth",
         "security": []
       },
       "delete": {
         "summary": "Sign out",
         "tags": [],
         "responses": {},
-        "operationId": "delete-auth-{authId}"
+        "operationId": "deleteAuth"
       },
       "post": {
         "summary": "",
-        "operationId": "post-auth-{authId}",
+        "operationId": "postAuth",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/users": {
+      "post": {
+        "summary": "",
+        "operationId": "postUser",
         "responses": {
           "200": {
             "description": "OK"
